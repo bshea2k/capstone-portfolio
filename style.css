@@ -4,3 +4,30 @@
     margin: 0px;
     padding: 0px;
 }
+
+.header {
+    display: flex;
+    width: 100vw;
+    height: 60px;
+    margin: 0px max(20px, 25vw - 200px);
+}
+
+.header__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.header__logo {
+    height: 30px;
+    width: auto;
+}
+
+.header__title {
+    color: #0D0D0D;
+    font-weight: bold;
+    font-size: 26px;
+}
