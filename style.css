@@ -9,6 +9,8 @@
 /* HEADER */
 
 .header {
+    position: sticky;
+    top: 0;
     display: flex;
     width: 100vw;
     height: 60px;
