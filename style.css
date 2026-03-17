@@ -6,6 +6,8 @@
     background-color: #F8F8F8;
 }
 
+/* HEADER */
+
 .header {
     display: flex;
     width: 100vw;
@@ -33,6 +35,8 @@
     font-weight: bold;
     font-size: 26px;
 }
+
+/* FOOTER */
 
 .footer {
     display: flex;
@@ -71,6 +75,8 @@
 .footer__link--main {
     font-weight: bold;
 }
+
+/* HERO */
 
 .hero {
     display: flex;
