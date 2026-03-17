@@ -142,6 +142,15 @@
     font-size: 26px;
 }
 
+/* ANNOTATED BIBLIOGRAPHY HERO SECTION */
+.bibliography-hero {
+    padding: 120px max(20px, 25vw - 200px);
+}
+
+.bibliography-hero__title {
+    font-size: 58px;
+}
+
 /* TEXT SECTION */
 .text-section {
     display: flex;
@@ -161,5 +170,11 @@
 
 .text-section__text {
     font-size: 19px;
+    background-color: inherit;
+}
+
+.text-section__list {
+    padding-left: 40px;
+    list-style: square;
     background-color: inherit;
 }
