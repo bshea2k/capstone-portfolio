@@ -71,3 +71,46 @@
 .footer__link--main {
     font-weight: bold;
 }
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 120px max(20px, 25vw - 200px);
+}
+
+.hero__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero__title {
+    color: #0D0D0D;
+    font-size: 49px;
+}
+
+.hero__caption {
+    color: #855CC0;
+    font-size: 30px;
+}
+
+.hero__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hero__button {
+    padding: 10px 20px;
+    color: #F8F8F8;
+    font-size: 19px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #855CC0;
+    border-radius: 5px;
+}
+
+.hero__button:hover {
+    background-color: #0D0D0D;
+}
