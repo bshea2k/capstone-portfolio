@@ -151,6 +151,15 @@
     font-size: 58px;
 }
 
+/* OVERALL CAPSTONE HERO SECTION */
+.overall-hero {
+    padding: 120px max(20px, 25vw - 200px);
+}
+
+.overall-hero__title {
+    font-size: 58px;
+}
+
 /* TEXT SECTION */
 .text-section {
     display: flex;
@@ -161,6 +170,18 @@
 
 .text-section--pink {
     background-color: #E19BCC;
+}
+
+.text-section--blue {
+    background-color: #5CC2D6;
+}
+
+.text-section--purple {
+    background-color: #9C7DD6;
+}
+
+.text-section--gray {
+    background-color: #D9D9D9;
 }
 
 .text-section__header {
