@@ -15,25 +15,28 @@
         </a>
     </header>
 
-    <h1 class="title title--large">Prototyping</h1>
-    <p class="body-text">This section displays artifacts relating to the functional prototype of the website.</p>
+    <section class="user-hero">
+        <h1 class="user-hero__title">Prototyping</h1>
+        <p class="user-hero__caption">This section displays artifacts relating to the functional prototype of the website.</p>
+    </section>
 
-    <h2 class="title title--medium">Shape Creation & Connection Snippet</h2>
-    <img src="../images/prototype-snippet.jpg" alt="A simple diagram composed of two shapes and a line connecting them" class="img img--large">
-    <p class="figure-caption">Shapes can additionally be moved and have their text edited</p>
-    <p class="body-text">The creation and connection between shapes are key components to diagramming. The prototype allows shapes to be created by clicking on them in a menu, which spawns the shape in the middle of the workspace. Two shapes can connect to each other by clicking on them successively. The intended behavior is to drag a line from one shape to another, but this is not implemented yet for simplicity. The current prototype is limited by vanilla JavaScript because the creation of shapes is redundant and there is not much control over line creation.  I intend to use Canvas API because it is dedicated to 2D graphics, which should improve development experience and performance capability.</p>
+    <section class="image-section image-section--gray">
+        <h2 class="image-section__header">Shape Creation & Connection Snippet</h2>
+        <p class="image-section__text">The creation and connection between shapes are key components to diagramming. The prototype allows shapes to be created by clicking on them in a menu, which spawns the shape in the middle of the workspace. Two shapes can connect to each other by clicking on them successively. The intended behavior is to drag a line from one shape to another, but this is not implemented yet for simplicity. The current prototype is limited by vanilla JavaScript because the creation of shapes is redundant and there is not much control over line creation.  I intend to use Canvas API because it is dedicated to 2D graphics, which should improve development experience and performance capability.</p>
+        <div class="image-section__image-container">
+            <img src="../images/prototype-snippet.jpg" alt="A simple diagram composed of two shapes and a line connecting them" class="image-section__image">
+            <p class="image-section__subtitle">Shapes can additionally be moved and have their text edited.</p>
+        </div>
+    </section>
 
-    <h2 class="title title--medium">Website Hosting Dashboard</h2>
-    <img src="../images/website-hosting-dashboard.jpg" alt="Screenshot showing a dashboard of a website hosting platform" class="img img--large">
-    <p class="figure-caption">Dashboard shows the domain and physical server, called a “droplet” by Digital Ocean</p>
-    <p class="body-text">This artifact shows the hosting dashboard for the website. Digital Ocean is the company that provides the physical server resources. I have full access to the server’s console, so I downloaded nginx, an HTTP web server, and made the proper configurations to host the website. Maneuvering nginx and the web server console was difficult, and I had to thoroughly read various documentation to properly host. I also purchased a domain, “elysianmap.com,” and configured its name servers to point to Digital Ocean’s, which makes the domain point to the correct web server.</p>
-    
-    <div class="nav-btn">
-        <p class="nav-btn__text"><a href="../pages/ui-ux.html">UI/UX</a></p>
-    </div>
-    <div class="nav-btn">
-        <p class="nav-btn__text"><a href="../pages/overall-capstone.html">Overall Capstone</a></p>
-    </div>
+    <section class="image-section">
+        <h2 class="image-section__header">Website Hosting Dashboard</h2>
+        <p class="image-section__text">This artifact shows the hosting dashboard for the website. Digital Ocean is the company that provides the physical server resources. I have full access to the server’s console, so I downloaded nginx, an HTTP web server, and made the proper configurations to host the website. Maneuvering nginx and the web server console was difficult, and I had to thoroughly read various documentation to properly host. I also purchased a domain, “elysianmap.com,” and configured its name servers to point to Digital Ocean’s, which makes the domain point to the correct web server.</p>
+        <div class="image-section__image-container">
+            <img src="../images/website-hosting-dashboard.jpg" alt="Screenshot showing a dashboard of a website hosting platform" class="image-section__image">
+            <p class="image-section__subtitle">Dashboard shows the domain and physical server, referred to as a “droplet” by Digital Ocean.</p>
+        </div>
+    </section>
 
     <footer class="footer">
         <a href="../index.html" class="header__link">
