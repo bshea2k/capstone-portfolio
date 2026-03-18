@@ -193,16 +193,15 @@
 
 .experience-hero__button {
     padding: 10px 20px;
-    color: #F8F8F8;
     font-size: 19px;
     font-weight: bold;
     text-decoration: none;
-    background-color: #855CC0;
+    background-color: #9c7DD6;
     border-radius: 5px;
 }
 
 .experience-hero__button:hover {
-    background-color: #0D0D0D;
+    background-color: #DED2F9;
 }
 
 /* TEXT SECTION */
