@@ -196,12 +196,13 @@
     font-size: 19px;
     font-weight: bold;
     text-decoration: none;
-    background-color: #9c7DD6;
+    background-color: #D9D9D9;
     border-radius: 5px;
 }
 
 .experience-hero__button:hover {
-    background-color: #DED2F9;
+    color: #F8F8F8;
+    background-color: #0D0D0D;
 }
 
 /* TEXT SECTION */
