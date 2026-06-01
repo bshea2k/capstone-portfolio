@@ -170,16 +170,16 @@
 
 .hero__button {
     padding: 10px 20px;
-    color: #F8F8F8;
     font-size: 19px;
     font-weight: bold;
     text-decoration: none;
-    background-color: #855CC0;
+    border: 4px solid #855CC0;
     border-radius: 5px;
 }
 
 .hero__button:hover {
-    background-color: #0D0D0D;
+    background-color: #855CC0;
+    color: #F8F8F8;
 }
 
 /* THE USER HERO SECTION */
@@ -242,7 +242,7 @@
 .experience-hero__buttons {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 10px;
 }
