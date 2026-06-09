@@ -31,19 +31,19 @@
 
     <section class="image-section image-section--gray">
         <h2 class="image-section__header">Diagram Editor Interface</h2>
-        <p class="image-section__text">Explanation</p>
+        <p class="image-section__text">The diagram editor contains a user interface that is standard for document editors. The user interface allows users to create and modify shapes, including their traits such as text, color, and lines. The workspace area that contains the shapes and the user interface are two different elements with different functionality. Separate TypeScript files contain their respective implementations. Communication is necessary between the diagram workspace and the user interface because the state of the diagram editor informs the user interface’s capability. For example, if no shape is currently selected, then the shape customization toolbar should not do anything.</p>
         <div class="image-section__image-container">
             <img class="image image--medium" src="../images/workspace-screenshot.png" alt="A screenshot showing a user interface of a diagram editor, with a toolbar at the top, shape creation menu on the left, and diagram workspace with shapes on the right.">
-            <p class="image-section__subtitle">Subtitle</p>
+            <p class="image-section__subtitle">When creating a new shape from the “shapes” user interface menu, its TypeScript file notifies the diagram workspace’s TypeScript file about the added shape. Then, the diagram workspace’s file performs the necessary functions to reflect the change to the user.</p>
         </div>
     </section>
 
     <section class="image-section">
         <h2 class="image-section__header">Shape Utilities Display</h2>
-        <p class="image-section__text">Explanation</p>
+        <p class="image-section__text">The diagram editor allows for the movement, resizing, and connection to lines of shapes. An abstract class called “UtilityPoint” implements the capability for shapes to resize and create lines. Every “Shape” class contains an array with the utility points that implement a certain function. So, every shape has 4 “ResizePoints” that allow the resizing of shapes’ corners, 4 “ResizeEdges” that allow the resizing of a specific edge of a shape, and 4 “ConnectionPoints” that allow the creation of lines. This approach of implementing the shape’s utilities taught me about the principles and usefulness of composition, particularly how easy it is to extend a program’s functionality with it.</p>
         <div class="image-section__image-container">
             <img class="image image--medium" src="../images/shape-utilities-display.gif" alt="A video showing a diagram shape getting resized, and creating a connection line from the shape.">
-            <p class="image-section__subtitle">Subtitle</p>
+            <p class="image-section__subtitle">With composition and the “UtilityPoint” class, all it takes to add a new utility function to a shape is to create a child class of “UtilityPoint” and add its instantiation(s) to the “Shape” class’s “UtilityPoint” array.</p>
         </div>
     </section>
 
