@@ -49,29 +49,29 @@
 
     <section class="image-section image-section--gray">
         <h2 class="image-section__header">Connection Lines Display</h2>
-        <p class="image-section__text">Explanation</p>
+        <p class="image-section__text">Connections lines in the diagram editor can attach and detach from shapes. The “Connection” class contains the connection line’s functionality. Isolating connection lines to their own classes means that there is less coupling with shapes. Shapes, the basis of the diagram editor, can function normally even if the “Connection” class didn’t exist. Following this approach, only starting and ending coordinates define a connection line, along with any shapes they connect to. This simplicity and decoupling makes the development of the diagram editor and its components much easier.</p>
         <div class="image-section__image-container">
             <img class="image image--medium" src="../images/connection-lines-display.gif" alt="">
-            <p class="image-section__subtitle">Subtitle</p>
+            <p class="image-section__subtitle">When a point of a connection line connects to a shape, its coordinate values become constrained to a value of 0 – 1. The value then represents the position the point is at relative to the scale of the shape. For example, a point connected to the bottom middle of a shape would have a coordinate of (0.5, 1), since 0.5 is the horizontal middle of the shape, and 1 is at the vertical bottom. This method allows a connection line to stay relatively in the same position when a shape gets resized.</p>
         </div>
     </section>
 
     <section class="image-section">
         <h2 class="image-section__header">User Input Handling Functionality</h2>
-        <p class="image-section__text">Explanation</p>
+        <p class="image-section__text">User input is a key component of the diagram editor, since the workspace depends on user interaction. To represent user input, I implemented a TypeScript type called “Input” that has fields relating to the nature of the input. For example, if a user clicks their mouse, it is represented with the fields “mouseDown” and “mousePos,” since the user clicked at a specific coordinate. The custom input type serves two purposes, simplification and extensibility. Using the input type means that raw user input can be cleaned, allowing the rest of the code to only have to worry about what is important. The input type also allows for easy implementation of other input types. For example, if I were to add mobile functionality, I would only have to add a “tap” and “tapPosition” field.</p>
         <div class="image-section__image-container">
             <img class="image image--small" src="../images/input-type.png" alt="A code snippet showing an input type, that has fields such as buttons pressed and how they are pressed.">
-            <p class="image-section__subtitle">Subtitle</p>
+            <p class="image-section__subtitle">The question marks denote that the respective field is optional. All fields are set to be optional because input can be vastly different, so an input isn’t always guaranteed to have a mouse position, for example. It is the responsibility of the functionality code to determine what the input type contains.</p>
         </div>
-        <p class="image-section__text">Explanation</p>
+        <p class="image-section__text">User input generates and gets cleaned when an event listener captures raw input. There are event listeners for the necessary input types. The two examples shown are the “mousedown” and “mousemove” events. The “Input” type gets generated and filled with the correct fields and values, then that input gets passed to the current diagram state, which then executes the proper functionality. This implementation ensures that user input gets executed properly and in order, meaning that generating input extremely quickly won’t break the code.</p>
         <div class="image-section__image-container">
             <img class="image image--large" src="../images/controller-input-handling.png" alt="A code snippet showing JavaScript event listeners create an input type and passing it to the controller's current state.">
-            <p class="image-section__subtitle">Subtitle</p>
+            <p class="image-section__subtitle">There are multiple states that can execute functionality for a given input type. The example in the snippet has a state grayed out, since it is not applicable for that input type. However, the code functions properly with multiple states handling input.</p>
         </div>
-        <p class="image-section__text">Explanation</p>
+        <p class="image-section__text">Each state class has a “handleInput” function that executes the proper functionality, depending on what the input contains. Each state class explicitly checks what the input contains and performs functionality based on the input.</p>
         <div class="image-section__image-container">
             <img class="image image--large" src="../images/state-input-handling.png" alt="A code snippet showing how an individual state class processes an input type.">
-            <p class="image-section__subtitle">Subtitle</p>
+            <p class="image-section__subtitle">States do not have to check every field in the input type, only what is relevant to them. For example, the dragging shape state in the snippet is not concerned with input relating to the keyboard, since dragging depends only on the mouse.</p>
         </div>
     </section>
 
