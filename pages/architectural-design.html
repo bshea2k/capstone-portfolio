@@ -63,15 +63,15 @@
 
     <section class="image-section">
         <h2 class="image-section__header">Entity Component System Implementation</h2>
-        <p class="image-section__text">Explanation</p>
+        <p class="image-section__text">The entity component system is responsible for the relationship between shapes/connections and their utilities. In the diagram editor, utilities are accessible through interface components in the diagram workspace. For example, resizing a shape’s corner is done through a “ResizePoint.” The “ResizePoint” is a child of the parent class “UtilityPoint,” which is what all utility points derive from.</p>
         <div class="image-section__image-container">
             <img class="image--large" src="../images/ecs-one.png" alt="Code showing the entity component system implementation." class="image-section__image">
-            <p class="image-section__subtitle">Subtitle</p>
+            <p class="image-section__subtitle">Utility point functionality is not implemented in its own class, but rather the controller. Utility point classes are only responsible for hit box detection, rendering, and information on what utility it is.</p>
         </div>
-        <p class="image-section__text">Explanation</p>
+        <p class="image-section__text">Once utility point classes are implemented, the entity classes (shapes and connections) implement them by instantiating them in a “UtilityPoint” array. Then, when the controller needs to execute a particular utility, its code checks entities to see if their array contains the respective utility point, then processes accordingly.</p>
         <div class="image-section__image-container">
             <img class="image--large" src="../images/ecs-two.png" alt="Code showing the entity component system implementation." class="image-section__image">
-            <p class="image-section__subtitle">Subtitle</p>
+            <p class="image-section__subtitle">The “Shape” class has three utilities, so it instantiates three types of utility points. There are four instantiations of each utility point since there is one UI component for each side of the shape, for each utility.</p>
         </div>
     </section>
 
