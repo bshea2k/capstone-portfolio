@@ -54,10 +54,10 @@
             <img class="image--medium" src="../images/state-one.png" alt="Code showing the state pattern implementation." class="image-section__image">
             <p class="image-section__subtitle">For an example of an “enter” and “exit” function, assume a state that modifies the style of the cursor. Upon entering this state, the “enter” function updates the cursor to a specified design, and when leaving this state, the “exit” function resets the cursor to default.</p>
         </div>
-        <p class="image-section__text">Explanation</p>
+        <p class="image-section__text">The main canvas controller updates its state via its “setState” function. When the function is given a new state that it is set to update to, it exits the current state, updates the current state to the passed in state, and then enters that state. This sequence of events ensures a clean transition between states. The state objects inside the canvas controller are where the “setState” function is called, which aligns with the principle of the state pattern and finite state machines.</p>
         <div class="image-section__image-container">
             <img class="image--medium" src="../images/state-two.png" alt="Code showing the state pattern implementation." class="image-section__image">
-            <p class="image-section__subtitle">Subtitle</p>
+            <p class="image-section__subtitle">There is an optional parameter for input, which is used in situations where the input that causes a state switch is necessary for the next state to know.</p>
         </div>
     </section>
 
